@@ -30,6 +30,12 @@ def input_error(func):
             return "Enter the argument for the command."
     return inner
 
+#Errors mapping:
+#add John          -> ValueError
+#update John       -> ValueError
+#show              -> IndexError
+#show Unknown      -> KeyError
+#all with no data  -> KeyError
 
 @input_error
 def add_contact(args, contacts):
